@@ -1,0 +1,8 @@
+{
+  "testRunner": "vitest",
+  "vitest": {
+    "configFile": "vitest.config.ts",
+    "dir": "src",
+    "related": true
+  }
+}
