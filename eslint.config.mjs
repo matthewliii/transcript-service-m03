@@ -31,7 +31,12 @@ export default defineConfig([
       'import/no-extraneous-dependencies': [
         'error',
         {
-          devDependencies: ['vite.config.mjs', 'eslint.config.mjs', '**/*.spec.ts', '**/tests/*.ts'],
+          devDependencies: [
+            'vite.config.mjs',
+            'eslint.config.mjs',
+            '**/*.{spec,test}.ts',
+            '**/tests/*.ts',
+          ],
           includeInternal: true,
         },
       ],
@@ -155,12 +160,11 @@ export default defineConfig([
     },
   },
   {
-    files: ['**/*.spec.{ts,tsx}', '**/tests'],
+    files: ['**/*.{spec,test}.{ts,tsx}', '**/tests'],
     rules: {
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
       '@typescript-eslint/unbound-method': 'off',
-      'import/no-extraneous-dependencies': 'off',
     },
   },
   {
